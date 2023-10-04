@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "Введите директорию для очистки от файлов .bak, .tmp, .backup"
+read DIR
+if [ -d $DIR ]
+then
+cd $DIR
+echo "Удаление файлов"
+rm -f *.bak *.tmp *.backup
+echo "Файлы с расширением .bak, .tmp, .backup удалены"
+else
+echo "Указанная директория не найдена"
+fi
